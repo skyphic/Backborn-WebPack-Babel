@@ -1,0 +1,16 @@
+{
+  "presets": [
+    "es2015-loose",
+    "stage-3"
+  ],
+  "plugins": [
+    "transform-runtime",
+    [
+      "module-alias",
+      {
+        "src": "./htdocs/src/js/app",
+        "expose": "app"
+      }
+    ]
+  ]
+}

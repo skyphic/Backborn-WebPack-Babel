@@ -1,0 +1,38 @@
+body
+    min-width 1200px
+    font-family "Hiragino Kaku Gothic ProN","メイリオ", sans-serif;
+    line-height 1
+
+
+// ----------------------------------------------------
+// sprite
+// ----------------------------------------------------
+
+spriteWidth($sprite)
+  width ($sprite[4] / 2)
+
+spriteHeight($sprite)
+  height ($sprite[5] / 2)
+
+spritePosition($sprite)
+  background-position ($sprite[2] / 2) ($sprite[3] / 2)
+
+spriteImage($sprite)
+  background-image url($sprite[8] + "?" + clear_cache_param)
+
+spriteBackgroundSize($sprite)
+  background-size ($sprite[6] / 2) ($sprite[7] / 2)
+
+sprite($sprite)
+  spriteImage $sprite
+  spritePosition $sprite
+  spriteWidth $sprite
+  spriteHeight $sprite
+  spriteBackgroundSize $sprite
+  background-repeat no-repeat
+
+sprites($sprites)
+  for $sprite in $sprites
+    $sprite_name = $sprite[9]
+    .{$sprite_name}
+      sprite($sprite)

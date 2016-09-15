@@ -1,0 +1,33 @@
+{
+    "parser": "babel-eslint",
+    // https://github.com/airbnb/javascript
+    "extends": "airbnb",
+    "rules": {
+        "indent": [2, 4, {"SwitchCase": 1}],
+        "no-nested-ternary": 0,
+        "max-len": [2, 120, 2, {
+            "ignoreUrls": true,
+            "ignoreComments": false
+        }]
+    },
+    "env": {
+        "browser": true,
+        "es6": true,
+        "jquery": true,
+        "mocha": true,
+        "node": true
+    },
+    "globals": {
+        "Base64": false,
+        "MedibaAdPortalClient": false,
+        "PortalAd": false,
+        "PortalNews": false,
+        "PortalRich": false,
+        "_": false,
+        "_uaListDeteredDevice": false,
+        "global": true,
+        "trEvent": false,
+        "trEventBe": false,
+        "trEventBeTimeControl": false,
+    }
+}
